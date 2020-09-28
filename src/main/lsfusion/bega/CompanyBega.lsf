@@ -1,0 +1,13 @@
+MODULE CompanyBega;
+
+REQUIRE Company;
+
+NAMESPACE MasterData;
+
+EXTEND CLASS Company;
+
+    AccauntPrint 'Инф. о р/с для печати' = DATA ISTRING[50] (Company);
+
+EXTEND FORM companies
+    PROPERTIES(c) AccauntPrint
+;

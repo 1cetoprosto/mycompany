@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="c" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="5" bottomMargin="0" uuid="405c6f75-96fa-4686-b857-a89486f38ade">
+	<property name="net.sf.jasperreports.export.xls.print.page.width" value="842"/>
+	<property name="net.sf.jasperreports.export.xls.print.page.height" value="595"/>
+	<style name="DefaultStyle" isDefault="true" vTextAlign="Middle" fontName="lsf.TimesNewRoman" fontSize="10">
+		<box>
+			<pen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+		</box>
+		<paragraph leftIndent="2" rightIndent="2"/>
+	</style>
+	<style name="GroupCellStyle1" mode="Opaque" backcolor="#EAEAEA" vTextAlign="Middle" fontName="lsf.TimesNewRoman" fontSize="10">
+		<box>
+			<pen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+		</box>
+		<paragraph leftIndent="2" rightIndent="2"/>
+	</style>
+	<style name="GroupCellStyle0" vTextAlign="Middle" fontName="lsf.TimesNewRoman" fontSize="10">
+		<box>
+			<pen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+		</box>
+		<paragraph leftIndent="2" rightIndent="2"/>
+	</style>
+	<field name="c.object" class="java.lang.Long"/>
+	<field name="name(c)" class="java.lang.String"/>
+	<field name="i.object" class="java.lang.Long"/>
+	<field name="id(i)" class="java.lang.String"/>
+	<field name="name(i)" class="java.lang.String"/>
+	<field name="nameUom(i)" class="java.lang.String"/>
+	<field name="price" class="java.math.BigDecimal"/>
+	<field name="price.header" class="java.lang.String"/>
+	<field name="image(i)" class="lsfusion.base.file.RawFileData"/>
+	<field name="price1" class="java.math.BigDecimal"/>
+	<field name="price2" class="java.math.BigDecimal"/>
+	<field name="price3" class="java.math.BigDecimal"/>
+	<group name="designGroup21780">
+		<groupExpression><![CDATA[String.valueOf($F{c.object})]]></groupExpression>
+		<groupHeader>
+			<band height="18" splitType="Prevent">
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="GroupCellStyle1" stretchType="RelativeToBandHeight" x="0" y="0" width="96" height="18" uuid="b46f5864-28cd-4b22-b5e3-ba721baf0392"/>
+					<textElement textAlignment="Center"/>
+					<textFieldExpression><![CDATA["Наименование"]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="GroupCellStyle1" positionType="Float" stretchType="RelativeToBandHeight" x="96" y="0" width="706" height="18" uuid="2597b2a7-d8e1-4ad0-911c-0e340fb0975f"/>
+					<textElement textAlignment="Left"/>
+					<textFieldExpression><![CDATA[$F{name(c)}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+	</group>
+	<pageHeader>
+		<band height="18">
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="GroupCellStyle0" stretchType="RelativeToBandHeight" x="0" y="0" width="87" height="18" uuid="0dc90de3-bca6-4d60-ba2b-3a9c041bcc62"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA["Код"]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="GroupCellStyle0" stretchType="RelativeToBandHeight" x="87" y="0" width="319" height="18" uuid="de239a57-a879-4bad-8f53-58d81adabc5f"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA["Наименование (полное)"]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="GroupCellStyle0" stretchType="RelativeToBandHeight" x="406" y="0" width="87" height="18" uuid="19e742b6-1258-435a-ace8-3efc37675a82"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA["Единица измерения"]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="GroupCellStyle0" stretchType="RelativeToBandHeight" x="493" y="0" width="64" height="18" uuid="e65d909d-c38f-4968-befe-d54bbd9cbe02"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$F{price.header}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="GroupCellStyle0" stretchType="RelativeToBandHeight" x="557" y="0" width="50" height="18" uuid="2a55ec43-6eeb-40a5-ae64-4e2f533abdaf"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA["Изображение"]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="GroupCellStyle0" stretchType="RelativeToBandHeight" x="607" y="0" width="64" height="18" uuid="de26b7ef-ed4f-4b5a-8422-999bd9f62815"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA["price1"]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="GroupCellStyle0" stretchType="RelativeToBandHeight" x="671" y="0" width="64" height="18" uuid="85264700-98a9-464b-bcb2-7174ce5bea71"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA["price2"]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="GroupCellStyle0" stretchType="RelativeToBandHeight" x="735" y="0" width="67" height="18" uuid="1b8d7f01-8ee3-4f2d-b672-a1e2e8c4124c"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA["price3"]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="18">
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="GroupCellStyle0" positionType="Float" stretchType="RelativeToBandHeight" x="0" y="0" width="87" height="18" uuid="cacb87b1-45bc-4077-9bca-757c38dedfd4"/>
+				<textElement textAlignment="Left"/>
+				<textFieldExpression><![CDATA[$F{id(i)}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="GroupCellStyle0" positionType="Float" stretchType="RelativeToBandHeight" x="87" y="0" width="319" height="18" uuid="2d329098-aa3c-4f84-b16a-a95d07690035"/>
+				<textElement textAlignment="Left"/>
+				<textFieldExpression><![CDATA[$F{name(i)}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="GroupCellStyle0" positionType="Float" stretchType="RelativeToBandHeight" x="406" y="0" width="87" height="18" uuid="43dc43cd-1643-4fd7-addb-f3fe88846554"/>
+				<textElement textAlignment="Left"/>
+				<textFieldExpression><![CDATA[$F{nameUom(i)}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="GroupCellStyle0" positionType="Float" stretchType="RelativeToBandHeight" x="493" y="0" width="64" height="18" uuid="0c709d45-de27-4a7e-95bb-2fb3eaafd063"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$F{price}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="GroupCellStyle0" positionType="Float" stretchType="RelativeToBandHeight" x="557" y="0" width="50" height="18" uuid="e6b9bef6-33d8-41ba-9020-ec7d5d524515"/>
+				<textElement textAlignment="Left"/>
+				<textFieldExpression><![CDATA[$F{image(i)}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="GroupCellStyle0" positionType="Float" stretchType="RelativeToBandHeight" x="607" y="0" width="64" height="18" uuid="8d0638f9-321a-4fd2-8f6e-9f7aff0cb17d"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$F{price1}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="GroupCellStyle0" positionType="Float" stretchType="RelativeToBandHeight" x="671" y="0" width="64" height="18" uuid="3ef6a433-108d-45e5-a140-b61b7279f125"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$F{price2}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="GroupCellStyle0" positionType="Float" stretchType="RelativeToBandHeight" x="735" y="0" width="67" height="18" uuid="b11dee8f-118f-401f-8d32-d82fe25074a5"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$F{price3}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

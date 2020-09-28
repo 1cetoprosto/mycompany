@@ -1,0 +1,20 @@
+MODULE CashComent;
+
+REQUIRE PosDashboardCash;
+
+EXTEND FORM inputMoney
+    OBJECTS s = STRING PANEL
+    PROPERTIES(s) note 'Примечание' = VALUE
+;
+DESIGN inputMoney {
+    BOX(s) {
+        caption = '';
+        PROPERTY(note) { fontSize = 20; }
+    }
+}
+
+//afterWithdraw(Pos p, OutgoingPayment o) + {
+//    DIALOG inputMoney OBJECTS s INPUT DO {
+//        note(o) <- s;
+//    }
+//}

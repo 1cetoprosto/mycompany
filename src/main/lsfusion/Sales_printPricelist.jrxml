@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Прайс-лист" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="30" bottomMargin="30" uuid="dfe58446-076a-454c-8384-312725797346">
+	<property name="net.sf.jasperreports.export.xls.print.page.width" value="842"/>
+	<property name="net.sf.jasperreports.export.xls.print.page.height" value="595"/>
+	<style name="DefaultStyle" isDefault="true" vTextAlign="Middle" fontName="lsf.TimesNewRoman" fontSize="10">
+		<box>
+			<pen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+		</box>
+		<paragraph leftIndent="2" rightIndent="2"/>
+	</style>
+	<style name="GroupCellStyle3" vTextAlign="Middle" fontName="lsf.TimesNewRoman" fontSize="10">
+		<box>
+			<pen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+		</box>
+		<paragraph leftIndent="2" rightIndent="2"/>
+	</style>
+	<style name="GroupCellStyle2" mode="Opaque" backcolor="#D5D5D5" vTextAlign="Middle" fontName="lsf.TimesNewRoman" fontSize="10">
+		<box>
+			<pen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+		</box>
+		<paragraph leftIndent="2" rightIndent="2"/>
+	</style>
+	<parameter name="t_report" class="net.sf.jasperreports.engine.JasperReport"/>
+	<parameter name="t_source" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="t_params" class="java.util.Map"/>
+	<parameter name="c_report" class="net.sf.jasperreports.engine.JasperReport"/>
+	<parameter name="c_source" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="c_params" class="java.util.Map"/>
+	<field name="pt.object" class="java.lang.Long"/>
+	<field name="name(pt)" class="java.lang.String"/>
+	<field name="nameCompany(pt)" class="java.lang.String"/>
+	<field name="addressCompany(pt)" class="java.lang.String"/>
+	<field name="phoneCompany(pt)" class="java.lang.String"/>
+	<field name="emailCompany(pt)" class="java.lang.String"/>
+	<field name="websiteCompany(pt)" class="java.lang.String"/>
+	<group name="designGroup21744">
+		<groupExpression><![CDATA[String.valueOf($F{pt.object})]]></groupExpression>
+		<groupHeader>
+			<band height="18" splitType="Prevent">
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="GroupCellStyle2" stretchType="RelativeToBandHeight" x="0" y="0" width="150" height="18" uuid="c4b7306f-d899-4dcc-9db9-b0049887ec89"/>
+					<textElement textAlignment="Center"/>
+					<textFieldExpression><![CDATA["Наименование"]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="GroupCellStyle2" stretchType="RelativeToBandHeight" x="150" y="0" width="81" height="18" uuid="6877dd8f-b494-47cf-8d92-8b25674bd423"/>
+					<textElement textAlignment="Center"/>
+					<textFieldExpression><![CDATA["Компания"]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="GroupCellStyle2" stretchType="RelativeToBandHeight" x="231" y="0" width="323" height="18" uuid="988f3f14-11b1-4758-aa37-96592a0bbc4e"/>
+					<textElement textAlignment="Center"/>
+					<textFieldExpression><![CDATA["addressCompany"]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="GroupCellStyle2" stretchType="RelativeToBandHeight" x="554" y="0" width="81" height="18" uuid="e8003642-25c2-47f8-b479-16bb679f0925"/>
+					<textElement textAlignment="Center"/>
+					<textFieldExpression><![CDATA["phoneCompany"]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="GroupCellStyle2" stretchType="RelativeToBandHeight" x="635" y="0" width="81" height="18" uuid="34282d6f-2659-44d6-a67b-1967540ade4a"/>
+					<textElement textAlignment="Center"/>
+					<textFieldExpression><![CDATA["emailCompany"]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="GroupCellStyle2" stretchType="RelativeToBandHeight" x="716" y="0" width="86" height="18" uuid="1f78715f-a948-4ae7-a212-6bcd14b0b9bb"/>
+					<textElement textAlignment="Center"/>
+					<textFieldExpression><![CDATA["websiteCompany"]]></textFieldExpression>
+				</textField>
+			</band>
+			<band height="18" splitType="Prevent">
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="GroupCellStyle2" positionType="Float" stretchType="RelativeToBandHeight" x="0" y="0" width="150" height="18" uuid="f25f1036-de9c-4463-94b9-42168ec19d03"/>
+					<textElement textAlignment="Left"/>
+					<textFieldExpression><![CDATA[$F{name(pt)}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="GroupCellStyle2" positionType="Float" stretchType="RelativeToBandHeight" x="150" y="0" width="81" height="18" uuid="ddf88e2a-e536-4086-a857-82bcbd46d896"/>
+					<textElement textAlignment="Left"/>
+					<textFieldExpression><![CDATA[$F{nameCompany(pt)}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="GroupCellStyle2" positionType="Float" stretchType="RelativeToBandHeight" x="231" y="0" width="323" height="18" uuid="450f0fd7-de3a-4088-b920-1ba6eed1b442"/>
+					<textElement textAlignment="Left"/>
+					<textFieldExpression><![CDATA[$F{addressCompany(pt)}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="GroupCellStyle2" positionType="Float" stretchType="RelativeToBandHeight" x="554" y="0" width="81" height="18" uuid="374c8618-bc1b-40e4-ae53-b40eb658da66"/>
+					<textElement textAlignment="Left"/>
+					<textFieldExpression><![CDATA[$F{phoneCompany(pt)}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="GroupCellStyle2" positionType="Float" stretchType="RelativeToBandHeight" x="635" y="0" width="81" height="18" uuid="18473bfc-3359-47ec-957f-1080e2aa5abe"/>
+					<textElement textAlignment="Left"/>
+					<textFieldExpression><![CDATA[$F{emailCompany(pt)}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+					<reportElement style="GroupCellStyle2" positionType="Float" stretchType="RelativeToBandHeight" x="716" y="0" width="86" height="18" uuid="ff5a775a-c59d-4fb6-9606-fbf61681f942"/>
+					<textElement textAlignment="Left"/>
+					<textFieldExpression><![CDATA[$F{websiteCompany(pt)}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+	</group>
+	<detail>
+		<band>
+			<subreport>
+				<reportElement stretchType="RelativeToBandHeight" x="0" y="0" width="0" height="0" uuid="d158cd6a-fbc5-4f69-a086-26f8a475a7b0"/>
+				<parametersMapExpression><![CDATA[$P{t_params}]]></parametersMapExpression>
+				<dataSourceExpression><![CDATA[$P{t_source}]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{t_report}]]></subreportExpression>
+			</subreport>
+		</band>
+		<band>
+			<subreport>
+				<reportElement stretchType="RelativeToBandHeight" x="0" y="0" width="0" height="0" uuid="4f5ec8c1-e34f-4aa5-b930-84a7b797fc0e"/>
+				<parametersMapExpression><![CDATA[$P{c_params}]]></parametersMapExpression>
+				<dataSourceExpression><![CDATA[$P{c_source}]]></dataSourceExpression>
+				<subreportExpression><![CDATA[$P{c_report}]]></subreportExpression>
+			</subreport>
+		</band>
+	</detail>
+</jasperReport>

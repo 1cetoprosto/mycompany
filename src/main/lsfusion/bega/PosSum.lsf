@@ -1,0 +1,13 @@
+MODULE PosSum;
+
+REQUIRE PosDashboard;
+
+EXTEND FORM posDashboard
+    PROPERTIES(l) amount READONLY
+;
+
+//DESIGN posDashboard {
+//    GRID(l) {
+//        PROPERTY(amount(l)) { caption = 'Сумма'; } BEFORE PROPERTY(price(l))
+//    }
+//}

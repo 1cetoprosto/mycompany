@@ -1,0 +1,40 @@
+MODULE MinBalance;  // Выводить в спр.Номенклатура и в док. Заказ поставщику Мин. остаток товара,
+                    // в док. Заказ поставщику отобразить разницу между доступным количеством и мин.остатком
+
+REQUIRE Product, PurchaseOrderSearch;
+
+NAMESPACE Purchase;
+
+// Спр.Номенклатура 
+EXTEND CLASS Product;
+    minbalance 'Мин. остаток' = DATA NUMERIC[11,3] (Product);
+    
+EXTEND FORM item
+    PROPERTIES(i) minbalance
+;
+
+DESIGN item {
+    tabs {
+        inventory {
+            box1 {
+                MOVE PROPERTY(minbalance(i)) { charWidth = 5; };
+            }  
+        }
+    }
+}
+
+EXTEND FORM items
+    PROPERTIES(i) READONLY minbalance
+;
+
+// Заказ поставщику
+minbalancep 'Мин. остаток' (Product p) = minbalance(p);
+balancep 'Баланс (разница)' (Product p, Order o) = available(o, p) (-) minbalance(p);
+
+EXTEND FORM order
+    PROPERTIES(itm) READONLY minbalancep
+    PROPERTIES(itm, o) BACKGROUND #FF8073 IF balancep(itm, o) < 0 READONLY balancep
+;
+
+
+ 

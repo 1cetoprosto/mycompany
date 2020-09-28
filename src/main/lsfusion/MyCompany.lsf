@@ -8,4 +8,5 @@ REQUIRE EvalScript, ProcessMonitor, Backup,
         Sales,
         Retail,  
         Manufacturing,
-        BillReceiptCost, BillReceiptCostService; // initialize after Purchase
+        BillReceiptCost, BillReceiptCostService,
+        CompanyBega, PosSum, MinBalance, CashComent; // initialize after Purchase

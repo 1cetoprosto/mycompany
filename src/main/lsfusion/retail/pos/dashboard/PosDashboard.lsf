@@ -22,7 +22,7 @@ FORM posDashboard 'POS'
     FILTERS session(i) = s
     
     OBJECTS l = InvoiceLine
-    PROPERTIES(l) index READONLY, nameItem, quantity, price, 
+    PROPERTIES(l) index READONLY, nameItem, quantity, price,  
                   nameSalesDiscount ON CHANGE changeSalesDiscount(l), discount, discountPrice, 
                   DELETE GRID
     PROPERTIES(l) PANEL READONLY nameItemPanel = nameItem, nameUom, idBarCodeItem, idItem

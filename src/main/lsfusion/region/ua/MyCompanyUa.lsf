@@ -1,0 +1,9 @@
+MODULE MyCompanyUa;
+
+REQUIRE MyCompany,
+        LegalEntityRu,
+        InventoryRu,
+        InvoicingRu, 
+        PurchaseRu,
+        SalesRu,
+        CashRegisterAtol;
